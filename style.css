@@ -1,0 +1,47 @@
+body{
+	background-color: rgba(247, 110, 110, 0.514);
+}
+
+.card {
+	width: 60vw;
+	height: 50vh;
+	border: 2px solid rgb(24, 23, 23);
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 20vh 30vw;
+	/* margin: 100px 500px; */
+	display: inline-bloc1;
+	border-radius: 20%;
+  }
+  .card-data{
+	display: flex;
+	flex-direction: column;		
+	
+  }
+  
+  .cardData{
+	border: 1px solid black;
+	width: 100px;
+  }
+  .card img {
+	/* border: 1px solid red; */
+	width: 50%;
+	margin-left: 25%;
+	height: 50%;
+	object-fit: cover;
+  }
+  
+  .card-content {
+	padding: 20px;
+	text-align: center;
+  }
+  
+  button {
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+	margin: 1vh ;
+  }
