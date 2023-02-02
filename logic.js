@@ -320,7 +320,9 @@ const data= [
       let S_No = document.getElementById('s_no');
 	  let Roll_No = document.getElementById("roll");
 	  let Name = document.getElementById("name");
-	  const nextButton = document.getElementById("next-button");
+	  const presentBtn = document.getElementById("presentBtn");
+	  const absentBtn = document.getElementById("absentBtn");
+
       const downloadButton = document.getElementById("download-button");
 
 
@@ -336,9 +338,12 @@ const data1 = [
 ];
 
 
-function presentBtn(){
+function presentBtn_w(){
     
 	console.log("yes");
+
+  document.getElementById("presentBtn").style.backgroundColor= "green";
+
     S_No.innerText=data[i].S_No;
     Roll_No.innerText=data[i].Roll_No;
     Name.innerText=data[i].Name;
@@ -346,6 +351,7 @@ function presentBtn(){
     data1.push([data[i].S_No,data[i].Roll_No,data[i].Name]);
     console.log(data1[i]);
     i++;
+    document.getElementById("presentBtn").style.backgroundColor= "yellow";
     // update in excel 
     
    
@@ -359,7 +365,7 @@ function presentBtn(){
 	// console.log(S_No);
 	// console.log(data[1].Name);
 };
-function absentBtn(){
+function absentBtn_w(){
     
     S_No.innerText=data[i].S_No;
     Roll_No.innerText=data[i].Roll_No;
