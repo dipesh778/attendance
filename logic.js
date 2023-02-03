@@ -354,16 +354,7 @@ function load_card(){
 
 function presentBtn_w(){
     
-	// console.log("yes");
-
-  // document.getElementById("presentBtn").style.backgroundColor= "green";
-
-    // S_No.innerText=data[i].S_No;
-    // Roll_No.innerText=data[i].Roll_No;
-    // Name.innerText=data[i].Name;
-    // update in excel 
-       data1.push([data[i].S_No,data[i].Roll_No,data[i].Name]);
-    // console.log(data1[i]);
+    data1.push([data[i].S_No,data[i].Roll_No,data[i].Name]);
     i++;
     load_card();
     document.getElementById("presentBtn").style.backgroundColor= "yellow";
@@ -422,4 +413,93 @@ letters.forEach((letter, i) => {
 });
 
 
+
+// page 3
+
+
+const tableBody = document.querySelector('#tableBody');
+
+data.forEach(item => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td>${item.S_No}</td>
+    <td>${item.Name}</td>
+    <td>${item.Roll_No}</td>
+    <td>
+      <button id="aBtn">Absent</button>
+      <button id="pBtn">Present</button>
+    </td>
+  `;
+  tableBody.appendChild(tr);
+});
+
+
+// access all edit buttons
+
+
+
+// let onceC=0;
+
+
+// // absent btn working
+// const absButtons = document.querySelectorAll('#myTable button:first-child');
+
+// absButtons.forEach(button => {
+//   button.addEventListener('click', event => {
+//     button.style.backgroundColor = 'red';
+
+//   console.log("absent btn clicked");
+//     // Handle edit button click event
+//   });
+// });
+
+
+// // present btn working
+// const pstButtons = document.querySelectorAll('#myTable button:last-child');
+
+// pstButtons.forEach(button => {
+//   button.addEventListener('click', event => {
+//     button.style.backgroundColor = 'green';
+
+//   console.log("absent btn clicked");
+//     // Handle edit button click event
+//   });
+// });
+
+
+
+const abstButtons = document.querySelectorAll('#myTable button:first-child');
+const prstButtons = document.querySelectorAll('#myTable button:last-child');
+
+abstButtons.forEach((editButton, index) => {
+  editButton.addEventListener('click', event => {
+    editButton.style.backgroundColor = 'red';
+    prstButtons[index].style.backgroundColor = '';
+    console.log(index);
+
+    console.log("pop");
+    console.log(index);
+    console.log(data[index].S_No);
+
+    console.log([data[index].S_No,data[index].Roll_No,data[index].Name]);
+    if(data[index].S_No==index)
+    data1.pop([data[index].S_No,data[index].Roll_No,data[index].Name]);
+  });
+});
+
+prstButtons.forEach((deleteButton, index) => {
+  deleteButton.addEventListener('click', event => {
+    console.log(index);
+    console.log("push");
+    console.log(index);
+    console.log(data[index].S_No);
+
+
+    console.log([data[index].S_No,data[index].Roll_No,data[index].Name]);
+    data1.push([data[index].S_No,data[index].Roll_No,data[index].Name]);
+    
+    deleteButton.style.backgroundColor = 'green';
+    abstButtons[index].style.backgroundColor = '';
+  });
+});
 

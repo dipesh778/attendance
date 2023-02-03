@@ -22,8 +22,8 @@
 	  <div id="textcont2"><span id="a1">Attendance sheet generator</span> </div>
 </div>
 
-<a id="a2" style="position: absolute; height:20px;"  onclick="window.location.reload()" ><span class="material-symbols-outlined">Home</span></a>	<div class="box1">
-		
+	<div class="box1">
+		<a id="a2" style="position: absolute; height:20px;"  onclick="window.location.reload()" ><span class="material-symbols-outlined">Home</span></a>
 	<div class="card">
 		<img src="./media/dp.png" alt="Card Image" id="dp">
 		<div class="card-data" id="a1">
@@ -41,6 +41,26 @@
 		</div>
 		
 	  </div>
+	</div>
+
+
+<!-- page 3 -->
+	<div class="page3">
+		<table id="myTable">
+			<thead>
+			  <tr>
+				<th>S no.</th>
+				<th>Name</th>
+				<th>Roll no</th>
+				<th>Action</th>
+			  </tr>
+			</thead>
+			<tbody id="tableBody">
+				
+			</tbody>
+		  </table>
+		  <button class="card-button" id="download-button" onclick="test()">Submit & Download</button>
+
 	</div>
 	  <script src="logic.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.3/xlsx.core.min.js"></script>
