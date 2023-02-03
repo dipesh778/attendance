@@ -336,23 +336,37 @@ let i=0;
 const data1 = [
     ["S_No", "Roll_No", "Name"],
 ];
+// load button working
+function loadBtn_w(){
+  console.log("yesss");
+  document.getElementById("page1").style.zIndex = "-1";
+  load_card();
+
+}
+// load card
+function load_card(){
+
+  S_No.innerText=data[i].S_No;
+  Roll_No.innerText=data[i].Roll_No;
+  Name.innerText=data[i].Name;
+}
 
 
 function presentBtn_w(){
     
-	console.log("yes");
+	// console.log("yes");
 
-  document.getElementById("presentBtn").style.backgroundColor= "green";
+  // document.getElementById("presentBtn").style.backgroundColor= "green";
 
-    S_No.innerText=data[i].S_No;
-    Roll_No.innerText=data[i].Roll_No;
-    Name.innerText=data[i].Name;
-    // data1.push([2,121,"ram"]);
-    data1.push([data[i].S_No,data[i].Roll_No,data[i].Name]);
-    console.log(data1[i]);
-    i++;
-    document.getElementById("presentBtn").style.backgroundColor= "yellow";
+    // S_No.innerText=data[i].S_No;
+    // Roll_No.innerText=data[i].Roll_No;
+    // Name.innerText=data[i].Name;
     // update in excel 
+       data1.push([data[i].S_No,data[i].Roll_No,data[i].Name]);
+    // console.log(data1[i]);
+    i++;
+    load_card();
+    document.getElementById("presentBtn").style.backgroundColor= "yellow";
     
    
 	
@@ -367,12 +381,23 @@ function presentBtn_w(){
 };
 function absentBtn_w(){
     
+    // S_No.innerText=data[i].S_No;
+    // Roll_No.innerText=data[i].Roll_No;
+    // Name.innerText=data[i].Name;
+    i++;
+    load_card();
+}
+
+
+function previousBtn_w(){
+    i--;
     S_No.innerText=data[i].S_No;
     Roll_No.innerText=data[i].Roll_No;
     Name.innerText=data[i].Name;
-    i++;
-}
+    console.log(i);
 
+    
+}
 //   generate excel
   function test(){
 	console.log("yes");
@@ -382,6 +407,19 @@ function absentBtn_w(){
 	  XLSX.writeFile(wb, "excel-sheet.xls");
 	};
 	
+
+// animation on page1 
+const text = document.getElementById("text");
+const letters = text.innerText.split("");
+text.innerText = "";
+
+letters.forEach((letter, i) => {
+  setTimeout(() => {
+    const newSpan = document.createElement("span");
+    newSpan.innerText = letter;
+    text.appendChild(newSpan);
+  }, i * 100);
+});
 
 
 
