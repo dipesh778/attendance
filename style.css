@@ -3,22 +3,27 @@
 }
 
 body{
-	background-color: rgba(219, 197, 99, 0.514);
+	/* background-color: rgba(219, 197, 99, 0.514); */
+	background-image: url(./media/img1.jpg) ;
+	/* background-repeat: no-repeat; */
+	
 }
 
 .page1{
+	background-color: rgba(0, 0, 0, 0.661);
 	width: 100vw; 
 	 height: 100vh;
-	 background-color: rgb(243, 50, 50);
+	 /* background-color: rgb(243, 50, 50); */
 	/* background-image: url(./media/bg4.jpg); */
 	/* background-position: 100%; */
 	/* z-index: 3; */
 	visibility: visible;
 	display: flex;
 	flex-direction: column;
-	/* position: absolute; */
+	position: absolute;
 	justify-content: center;
 	align-items: center;
+	color: white;
 
 	
 }
@@ -37,12 +42,12 @@ body{
 	opacity: 0;
 	font-size: 45px;
 	font-weight: bold;
-	color: rgb(241, 197, 197);
+	color: wheat;
 	animation: textAnimation 2s ease-in-out forwards;
   }
   #loadBtn{
 	margin: 5vh;
-	
+	border-radius: 30%;
 	width: 150px;
 	height: 55px;
   }
@@ -70,107 +75,25 @@ body{
 	margin-top: 50%;
 } */
 
-
-/* page2 */
 #a2{
+	font-size: 25px;
+	font-weight: bold;
+	color: rgb(253, 253, 247);
 	/* width: 100px; */
-	color: white;
+	
 	top: 30px;
 	left: 90vw;
+	/* z-index: 7; */
+
 	/* line-height: 10px; */
 }
-.box1{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: rgb(211, 11, 45);
-	width: 100vw;
-	height: 100vh;
-	/* z-index: 2; */
-	/* position: absolute; */
-	/* border: 1px solid red; */
-}
-
-.card {
-	background-color: rgba(255, 0, 21, 0.411);
-	width: 60vw;
-	height: 60vh;
-	border: 2px solid rgb(24, 23, 23);
-	border-radius: 10px;
-	overflow: hidden;
-	margin: 16vh 18vw;
-	/* margin: 100px 500px; */
-	display: inline-block;
-	border-radius: 20%;
-  }
-  .card-data{
-	display: flex;
-	flex-direction: column;	
-	margin-top: 10px;	
-	
-  }
-  
-  .cardData{
-	padding-top: 3px;
-	padding-left: 8px;
-	/* text-align: center; */
-	border: 1px solid rgb(228, 197, 22);
-	border-radius: 15px;
-	width: fit;
-	font-size: 20px;
-	height: fit-content;
-	margin: 0.5vh ;
-	margin-left: 2vw;
-	overflow: hidden;
-	
-  }
-  .card img {
-	/* border: 1px solid red; */
-	width: 50%;
-	margin-left: 25%;
-	margin-top: 3%;
-	height: 30%;
-	object-fit: cover;
-  }
-  .in_text{
-	font: bolder;
-	color: white;
-  }
-  
-  .card-content {
-	/* padding: 20px; */
-	text-align: center;
-	margin-top: 20px;
-  }
-  
-  button {
-	border: none;
-	border-radius: 15px;
-	padding: 10px 20px;
-	background-color: #4CAF50;
-	color: rgb(12, 11, 11);
-	cursor: pointer;
-	margin: 1vh ;
-	background-color: yellow;
-  }
-
+/* page2 */
 
 @media only screen and (min-width: 600px){
 	body{
 		background-color: rgb(201, 130, 130);
 	}
-	.card {
-		background-color: rgba(221, 62, 141, 0.411);
-		width: 400px;
-		height: 60vh;
-		border: 2px solid rgb(24, 23, 23);
-		border-radius: 10px;
-		overflow: hidden;
-		/* margin: 100px 500px; */
-		display: inline-bloc1;
-		border-radius: 20%;
-	  }
-
+	
 }
 
 
@@ -178,26 +101,42 @@ body{
 
 .page3{
 	width: 100vw; 
+	color: antiquewhite;
 	 /* height: 100vh; */
-	 background-color: rgb(110, 235, 235);
+	 background-color: rgba(11, 11, 11, 0.645);
 	/* background-image: url(./media/bg4.jpg); */
 	/* background-position: 100%; */
 	/* z-index: 8; */
-	visibility: visible;
+    visibility: collapse;
+	/* visibility: hidden; */
+	z-index: -1;
 	display: flex;
 	flex-direction: column;
-	/* position: absolute; */
+	position: absolute;
 	justify-content: center;
 	align-items: center;
 	border: 5 px solid white;
 
 	
 }
+.header{
+	width: 100vw;
+	height: 6vh;
+	padding-left: 25vw;
+	padding-top: 1vh;
+	background-color: rgba(13, 14, 14, 0.887);
+	position: fixed;
+	border-radius: 7vw;
+	top: 0vh;
+}
 table {
 	/* padding: 2px; */
 	/* margin-top: 200px; */
 	/* border-collapse: collapse; */
 	width: 100%;
+	border-color: aliceblue;
+	margin-bottom: 7vh;
+	margin-top: 7vh;
 	
   }
   
@@ -206,15 +145,15 @@ table {
 	padding: 8px;
 	text-align: left;
 	font-size: 15px;
-	color: black;
+	color: wheat;
   }
   
   th {
-	background-color: rgb(190, 109, 109);
+	background-color: rgba(17, 16, 16, 0.678);
   }
   
  .tbody button {
-	background-color: lightgray;
+	background-color: rgb(67, 67, 215);
 	border: none;
 	padding: 8px 16px;
 	text-align: center;
@@ -223,4 +162,31 @@ table {
 	margin: 4px 2px;
 	cursor: pointer;
   }
-  
+ #pBtn{
+	background-color: rgb(206, 206, 69);
+ } 
+ input{
+	border-radius: 20%;
+	height: 5vh;
+ }
+ .floating_bar{
+	width: 100vw;
+	height: 7vh;
+	background-color: rgb(13, 14, 14);
+	/* position: sticky; */
+	/* margin-bottom: 90vh; */
+	position: fixed;
+	/* padding-top: 50px; */
+	top: 93vh;
+	/* z-index: 90; */
+
+ }
+ .card-button{
+	width: fit-content;
+	height: 5vh;
+	margin-left: 5vw;
+	/* margin-top: 1vh; */
+	background-color: rgba(6, 6, 6, 0.447);
+	color: rgba(255, 255, 255, 0.757);
+	border-radius: 40%;
+ }
