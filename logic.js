@@ -404,9 +404,9 @@ function previousBtn_w(){
     
 	  const ws = XLSX.utils.aoa_to_sheet(data1);
 	  const wb = XLSX.utils.book_new();
-    var sheetName = subjectSelected + changedate(dateSelected);
+    var sheetName = subjectSelected +"_"+ changedate(dateSelected);
 	  XLSX.utils.book_append_sheet(wb, ws, sheetName);
-	  XLSX.writeFile(wb, "excel-sheet.xls");
+	  XLSX.writeFile(wb, sheetName+".xls");
 	};
 	
 
